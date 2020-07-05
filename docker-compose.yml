@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+    ps:
+        image: postgres:11.8
+        ports:
+            - 5430:5432
+        environment:
+            POSTGRES_USER: tierra
+            POSTGRES_PASSWORD: playa
+            POSTGRES_DB: pic
+
