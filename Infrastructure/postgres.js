@@ -11,7 +11,18 @@ class PostgresClient {
             port: config.dbPort
         })
         this.client.connect()
-        return this.client
+    }
+
+    exec(query) {
+        return new Promise((resolve, reject) => {
+            this.client.query(query, (err, res) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    resolve(res)
+                }
+            })
+        })
     }
 }
 

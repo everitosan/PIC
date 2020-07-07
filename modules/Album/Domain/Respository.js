@@ -9,17 +9,19 @@ class AlbumRepository {
         console.log('Debe implementar como listar albums')
     }
 
-    create() {
+    create(data) {
         console.log('Debe implementar como crear un album')
     }
 
-    retrieve() {
+    retrieve(id) {
         console.log('Debe implementar como obtener un album')
     }
 
-    delete() {
+    delete(id) {
         console.log('Debe implementar como eliminar un album')
     }
 
 
 }
+
+module.exports = AlbumRepository
